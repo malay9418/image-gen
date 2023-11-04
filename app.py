@@ -1,4 +1,4 @@
-# import gradio as gr
+import gradio as gr
 from diffusers import DiffusionPipeline, StableDiffusionXLImg2ImgPipeline
 import torch
 
@@ -28,10 +28,10 @@ def generate_image(prompt):
     return image
 
 
-# iface = gr.Interface(
-#    fn=generate_image,
-#    inputs=[gr.Textbox(label="Prompt")],
-#    outputs=gr.Image(label="Generated Image"),
-# )
+iface = gr.Interface(
+   fn=generate_image,
+   inputs=[gr.Textbox(label="Prompt")],
+   outputs=gr.Image(label="Generated Image"),
+)
 
 # iface.launch(share=True)
