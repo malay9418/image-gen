@@ -2,3 +2,4 @@ diffusers
 torch
 Pillow
 transformers
+gradio
